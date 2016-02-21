@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Alice);
+
+body {
+  background: #ddd;
+}
+
+h1 {
+  font-family: Alice;
+  font-size: 50px;
+  text-align: center;
+}
+.container {
+  height: 400px; 
+  width: 650px;
+  margin: auto;
+}
+
+.card {
+  height: 104px;
+  width: 70px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  transform: perspective(1000px);
+}
+
+.card:hover > .front {
+  cursor: pointer;
+  color: yellow;
+}
+
+.front {
+  position: absolute;
+  background: #456dea;
+  color: #fff;
+  height: 104px;
+  width: 70px;
+  line-height: 104px;
+  font-size: 80px;
+  border-radius: 9px;
+  text-align: center;
+  transform: perspective(1000px) rotateY(0deg);
+  backface-visibility: hidden;
+  transition: transform .5s ease-out 0s;
+}
+
+.back {
+  position: absolute;
+  background: #456dea;
+  color: red;
+  height: 104px;
+  width: 70px;
+  line-height: 104px;
+  font-size: 80px;
+  border-radius: 9px;
+  text-align: center;
+  transform: perspective(1000px) rotateY(180deg);
+  backface-visibility: hidden;
+  transition: transform .5s ease-out 0s;
+}
+
+.chances {
+  position: relative;
+  text-align: center;
+  margin-top: -150px;
+}
